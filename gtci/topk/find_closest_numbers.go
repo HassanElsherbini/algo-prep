@@ -5,6 +5,7 @@ import (
 	"sort"
 
 	"github.com/HassanElsherbini/algo-prep/common"
+	"github.com/HassanElsherbini/algo-prep/common/binaryheap"
 )
 
 /* MEDIUM
@@ -69,7 +70,7 @@ func FindClosestNumbers(nums []int, k, x int) []int {
 		return 0
 	}
 
-	minHeap := common.NewBinaryHeap(comparator)
+	minHeap := binaryheap.New(comparator)
 	if k > len(nums) {
 		return nil
 	}

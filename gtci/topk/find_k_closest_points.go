@@ -2,6 +2,7 @@ package topk
 
 import (
 	"github.com/HassanElsherbini/algo-prep/common"
+	"github.com/HassanElsherbini/algo-prep/common/binaryheap"
 )
 
 /* EASY
@@ -33,7 +34,7 @@ func FindKClosestPoints(points []common.Point2D, k int) []common.Point2D {
 		return 0
 	}
 
-	maxHeap := common.NewBinaryHeap(comparator)
+	maxHeap := binaryheap.New(comparator)
 	for i := 0; i < k; i++ {
 		maxHeap.Insert(points[i])
 	}

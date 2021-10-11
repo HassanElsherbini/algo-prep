@@ -3,7 +3,7 @@ package topk
 import (
 	"strings"
 
-	"github.com/HassanElsherbini/algo-prep/common"
+	"github.com/HassanElsherbini/algo-prep/common/binaryheap"
 )
 
 /* MEDIUM
@@ -42,7 +42,7 @@ func SortByCharFrequency(str string) string {
 		return 0
 	}
 
-	maxHeap := common.NewBinaryHeap(comparator)
+	maxHeap := binaryheap.New(comparator)
 	for _, char := range uniqueChars {
 		maxHeap.Insert(char)
 	}

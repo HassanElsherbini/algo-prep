@@ -2,6 +2,7 @@ package kwaymerge
 
 import (
 	"github.com/HassanElsherbini/algo-prep/common"
+	"github.com/HassanElsherbini/algo-prep/common/binaryheap"
 )
 
 /* HARD
@@ -36,7 +37,7 @@ func FindKSmallestInSortedMatrix(matrix [][]int, k int) int {
 		return 0
 	}
 
-	minHeap := common.NewBinaryHeap(comparator)
+	minHeap := binaryheap.New(comparator)
 	for i := 0; i < common.Min(k, len(matrix)); i++ {
 		minHeap.Insert(num{matrix[i][0], i, 0})
 	}

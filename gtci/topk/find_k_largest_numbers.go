@@ -1,6 +1,6 @@
 package topk
 
-import "github.com/HassanElsherbini/algo-prep/common"
+import "github.com/HassanElsherbini/algo-prep/common/binaryheap"
 
 /* EASY
 
@@ -27,7 +27,7 @@ func FindKLargestNumbers(nums []int, k int) []int {
 		return 0
 	}
 
-	minHeap := common.NewBinaryHeap(comparator)
+	minHeap := binaryheap.New(comparator)
 	for i := 0; i < k; i++ {
 		minHeap.Insert(nums[i])
 	}

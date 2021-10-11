@@ -1,8 +1,6 @@
 package topk
 
-import (
-	"github.com/HassanElsherbini/algo-prep/common"
-)
+import "github.com/HassanElsherbini/algo-prep/common/binaryheap"
 
 /*EASY
 
@@ -29,7 +27,7 @@ func FindKSmallestNumber(nums []int, k int) int {
 		return 0
 	}
 
-	maxHeap := common.NewBinaryHeap(comparator)
+	maxHeap := binaryheap.New(comparator)
 
 	for i := 0; i < k; i++ {
 		maxHeap.Insert(nums[i])

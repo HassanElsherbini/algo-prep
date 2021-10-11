@@ -1,6 +1,8 @@
 package kwaymerge
 
-import "github.com/HassanElsherbini/algo-prep/common"
+import (
+	"github.com/HassanElsherbini/algo-prep/common/binaryheap"
+)
 
 /* MEDIUM
 
@@ -31,7 +33,7 @@ func MergeSortedLists(lists [][]int) []int {
 		}
 		return 0
 	}
-	minheap := common.NewBinaryHeap(comparator)
+	minheap := binaryheap.New(comparator)
 
 	for i, l := range lists {
 		minheap.Insert(num{l[0], 0, i})

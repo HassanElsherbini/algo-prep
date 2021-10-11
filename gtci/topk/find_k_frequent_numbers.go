@@ -1,8 +1,6 @@
 package topk
 
-import (
-	"github.com/HassanElsherbini/algo-prep/common"
-)
+import "github.com/HassanElsherbini/algo-prep/common/binaryheap"
 
 /* MEDIUM
 
@@ -36,7 +34,7 @@ func FindKFrequentNumbers(nums []int, k int) []int {
 		}
 		return 0
 	}
-	minHeap := common.NewBinaryHeap(comparator)
+	minHeap := binaryheap.New(comparator)
 
 	for _, num := range uniqueNums {
 		minHeap.Insert(num)

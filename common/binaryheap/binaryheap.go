@@ -1,4 +1,4 @@
-package common
+package binaryheap
 
 type BinaryHeap struct {
 	Items      []interface{}
@@ -6,7 +6,7 @@ type BinaryHeap struct {
 	size       int
 }
 
-func NewBinaryHeap(c func(a, b interface{}) int) *BinaryHeap {
+func New(c func(a, b interface{}) int) *BinaryHeap {
 	return &BinaryHeap{comparator: c}
 }
 
